@@ -10,20 +10,20 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   RUN this program.  Then answer the following,
 #     GETTING HELP AS NEED! (Ask questions!!!)
 #
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#              Center
+#              Upper Left
 #
 #        -- In what direction on the screen does the positive X-axis point?
 #              To the right
 #
 #        -- In what direction on the screen does the positive Y-axis point?
-#              Up. towards the top
+#              Down towards the bottom
 #
 #     b. Write a line of code that constructs a basic RoseWindow object:
 #            window = rg.RoseWindow()
@@ -44,16 +44,17 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #          -- Write the names of three METHODs that Circle objects have:
 #               (Hint: Use the circle from the example3 function below with the dot trick to let PyCharm help you. )
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
-
+#               attach_to, clone, detach_from
+#
 #          -- Write the names of three INSTANCE VARIABLEs that Circle objects have:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#               fill_color, center, defaults
 #
 #     f. What does a RoseWindow RENDER method do?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#               draws any items attached to a rose window
 #
 #     g. When is a RoseWindow close_on_mouse_click method call necessary?  Why?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            It is used to close the window. It's necessary because the user
+#  needs a way to close the window when it is done running.
 #
 #   ASK QUESTIONS ** NOW ** if you do not understand how the
 #     RoseGraphics graphics system works.
@@ -74,10 +75,11 @@ def main():
       -- applying METHODS to them, and
       -- accessing their DATA via INSTANCE VARIABLES
     """
+
     example1()
     example2()
     example3()
-
+ 
 
 def example1():
     """ Displays an empty window. """
@@ -134,7 +136,6 @@ def example3():
     circle = rg.Circle(center_point, radius)
     circle.fill_color = 'green'
     circle.attach_to(window)
-
     # ------------------------------------------------------------------
     # Rectangle: needs two opposite corners.
     # ------------------------------------------------------------------
